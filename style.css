@@ -1,6 +1,5 @@
 /* 
-  Global Reset & Fonts 
-  (optional but recommended)
+  GLOBAL RESET & BASE
 */
 * {
   margin: 0;
@@ -8,185 +7,120 @@
   box-sizing: border-box;
 }
 
-/* 
-  Body with a dark gradient background 
-*/
 body {
-  font-family: Arial, sans-serif; /* use your preferred font */
   background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
-  color: #ffffff; /* text color on dark background */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
   line-height: 1.5;
-  margin: 0;
-  padding: 0;
 }
 
-/*
-  Headings: 
-  Make them pop with a neon or bright accent color 
-*/
-h1, h2, h3, h4, h5, h6 {
-  color: #ff3399; /* Neon pink accent */
-  margin-bottom: 15px;
+/* HEADINGS & TEXT */
+h1, h2, h3 {
+  color: #ff3399; /* Neon pink accent for headings */
 }
-
-/*
-  Links & Hover
-*/
-a {
-  color: #ff3399;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-a:hover {
-  color: #fff; /* On hover, switch text to white */
-}
-
-/*
-  Section container: 
-  Provide padding + maybe a subtle background 
-  (You can keep it transparent if you prefer)
-*/
-section {
-  padding: 50px 20px;
-  /* optional: a semi-transparent black background
-     background: rgba(0,0,0,0.3); 
-  */
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/*
-  "About Me" heading styles
-*/
-#about-me, #about, .about-section {
-  /* You can rename or unify your section IDs/classes */
-}
-
-/*
-  For visual separation between sections 
-  (like that bottom border that used to be blue):
-*/
-section h2 {
-  border-bottom: 2px solid #ff3399;
-  padding-bottom: 8px;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-/*
-  Basic paragraph styling
-*/
 p {
-  color: #cccccc; /* lighter gray text for better readability */
-  margin-bottom: 15px;
+  color: #cccccc; /* Slightly lighter gray for body text */
 }
 
-/*
-  Example "Hero" or top section styling
-*/
-header, .hero-section {
-  padding: 60px 20px;
+/* HERO SECTION */
+.hero-section {
   text-align: center;
-  /* keep background same as body if you want 
-     or use a slightly different gradient if you want variation
-  */
+  padding: 60px 20px;
 }
-
-/* For that big "Hello! I am Your Name" text */
-header h1, .hero-section h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #ffffff; /* White or accent, up to you */
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #ffffff; /* White for main heading */
+  margin-bottom: 10px;
 }
-header h2 {
+.hero-section h2 {
   font-size: 1.5rem;
-  color: #ff3399; /* or #fff if you prefer */
+  color: #ff3399;
   margin-bottom: 20px;
 }
+.hero-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto 30px; /* center the paragraph */
+}
 
-/*
-  Any CTA button 
-*/
-.cta-button, .btn, a.cta {
+/* CTA BUTTON */
+.cta-button {
   display: inline-block;
-  background: transparent;
   color: #ff3399;
   border: 2px solid #ff3399;
   padding: 10px 20px;
   border-radius: 4px;
-  font-weight: bold;
+  text-decoration: none;
   transition: background 0.3s, color 0.3s;
 }
-.cta-button:hover, .btn:hover, a.cta:hover {
+.cta-button:hover {
   background: #ff3399;
   color: #ffffff;
 }
 
-/*
-  Projects Section
-  You mentioned images + project titles, etc.
-*/
-#projects, .projects-section {
-  /* same idea as above, just a container */
+/* SECTION LAYOUT */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.project {
-  margin-bottom: 40px; /* space between projects */
-}
-.project img {
-  max-width: 300px; /* or whatever you like */
-  margin-bottom: 15px;
-  border: 3px solid #ff3399; /* neon border if you want */
-  box-shadow: 0 0 15px #ff3399; /* neon glow effect */
-}
-.project h3 {
-  /* heading for each project */
-  margin: 10px 0;
-  color: #ffffff; 
-}
-.project p {
-  margin-bottom: 10px;
-  color: #cccccc;
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ff3399;
+  padding-bottom: 8px;
 }
 
-/*
-  "Live" / "GitHub" links 
-  (turn them into small neon-outlined buttons)
-*/
+/* PROJECTS */
+.project {
+  margin-bottom: 40px;
+}
+.project img {
+  max-width: 300px;
+  border: 3px solid #ff3399;
+  box-shadow: 0 0 10px #ff3399;
+  margin-bottom: 10px;
+}
+.project h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.project p {
+  margin-bottom: 15px;
+}
 .project-links a {
   display: inline-block;
   margin-right: 10px;
-  padding: 8px 16px;
   border: 2px solid #ff3399;
+  padding: 6px 12px;
   color: #ff3399;
   border-radius: 4px;
-  transition: 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 .project-links a:hover {
   background-color: #ff3399;
   color: #ffffff;
 }
 
-/*
-  Footer 
-*/
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  color: #bbbbbb;
-  background: rgba(0,0,0,0.2);
+  color: #aaaaaa;
+  background: rgba(0,0,0,0.2); /* subtle dark overlay */
 }
 
-/* 
-  Responsive adjustments 
-*/
+/* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-  h1 {
+  .hero-section h1 {
     font-size: 2rem;
   }
   section {
-    padding: 30px 15px;
+    padding: 20px 15px;
   }
-  /* Adjust images or layout so they fit smaller screens */
   .project img {
     max-width: 100%;
   }
