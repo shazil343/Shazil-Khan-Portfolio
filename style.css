@@ -8,8 +8,8 @@
 }
 
 body {
-  /* Neon Gradient Background */
-  background: radial-gradient(circle at top left, #ff3399, #8e2de2, #4a00e0);
+  /* Subdued Gradient Background */
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -17,18 +17,18 @@ body {
 
 /* HEADINGS & TEXT */
 h1, h2, h3 {
-  color: #ff3399; /* Neon pink accent for headings */
-  text-shadow: 0 0 5px #ff3399, 0 0 10px #ff3399, 0 0 20px #ff3399, 0 0 40px #ff3399;
+  color: #ff6b81; /* Soft pink accent for headings */
+  text-shadow: 0 0 3px #ff6b81, 0 0 7px #ff6b81;
 }
 p {
-  color: #cccccc; /* Slightly lighter gray for body text */
+  color: #d1d1d1; /* Light gray for body text */
 }
 
 /* HERO SECTION */
 .hero-section {
   text-align: center;
   padding: 80px 20px;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
 }
 .hero-section h1 {
   font-size: 3rem;
@@ -37,7 +37,7 @@ p {
 }
 .hero-section h2 {
   font-size: 1.75rem;
-  color: #ff3399;
+  color: #ff6b81;
   margin-bottom: 20px;
 }
 .hero-section p {
@@ -50,19 +50,19 @@ p {
 /* CTA BUTTON */
 .cta-button {
   display: inline-block;
-  color: #ff3399;
-  border: 2px solid #ff3399;
+  color: #ff6b81;
+  border: 2px solid #ff6b81;
   padding: 12px 25px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 10px #ff3399, 0 0 20px #ff3399;
+  box-shadow: 0 0 8px #ff6b81, 0 0 16px #ff6b81;
 }
 .cta-button:hover {
-  background: #ff3399;
+  background: #ff6b81;
   color: #ffffff;
-  box-shadow: 0 0 20px #ff3399, 0 0 30px #ff3399;
+  box-shadow: 0 0 16px #ff6b81, 0 0 24px #ff6b81;
 }
 
 /* SECTION LAYOUT */
@@ -74,7 +74,7 @@ section {
 section h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  border-bottom: 2px solid #ff3399;
+  border-bottom: 2px solid #ff6b81;
   padding-bottom: 10px;
 }
 
@@ -90,18 +90,18 @@ section h2 {
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for projects */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 51, 153, 0.2);
+  box-shadow: 0 0 10px rgba(255, 107, 129, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 51, 153, 0.4);
+  box-shadow: 0 0 20px rgba(255, 107, 129, 0.4);
 }
 .project img {
   max-width: 100%;
   height: auto;
-  border: 3px solid #ff3399;
-  box-shadow: 0 0 10px #ff3399, 0 0 20px #ff3399;
+  border: 3px solid #ff6b81;
+  box-shadow: 0 0 8px #ff6b81, 0 0 16px #ff6b81;
   border-radius: 4px;
   margin-bottom: 15px;
 }
@@ -118,19 +118,19 @@ section h2 {
 .project-links a {
   display: inline-block;
   margin-right: 15px;
-  border: 2px solid #ff3399;
+  border: 2px solid #ff6b81;
   padding: 8px 18px;
-  color: #ff3399;
+  color: #ff6b81;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-  box-shadow: 0 0 5px #ff3399, 0 0 10px #ff3399;
+  box-shadow: 0 0 5px #ff6b81, 0 0 10px #ff6b81;
 }
 .project-links a:hover {
-  background-color: #ff3399;
+  background-color: #ff6b81;
   color: #ffffff;
-  box-shadow: 0 0 10px #ff3399, 0 0 20px #ff3399;
+  box-shadow: 0 0 10px #ff6b81, 0 0 20px #ff6b81;
 }
 
 /* CONTACT SECTION */
@@ -139,7 +139,7 @@ section h2 {
   line-height: 1.8;
 }
 #contact a {
-  color: #ff3399;
+  color: #ff6b81;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
