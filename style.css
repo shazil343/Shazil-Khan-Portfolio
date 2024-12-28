@@ -17,8 +17,8 @@ body {
 
 /* HEADINGS & TEXT */
 h1, h2, h3 {
-  color: #ff6b81; /* Soft pink accent for headings */
-  text-shadow: 0 0 3px #ff6b81, 0 0 7px #ff6b81;
+  color: #1abc9c; /* Teal accent for headings */
+  text-shadow: 0 0 3px #1abc9c, 0 0 7px #16a085;
 }
 p {
   color: #d1d1d1; /* Light gray for body text */
@@ -37,7 +37,7 @@ p {
 }
 .hero-section h2 {
   font-size: 1.75rem;
-  color: #ff6b81;
+  color: #1abc9c;
   margin-bottom: 20px;
 }
 .hero-section p {
@@ -50,19 +50,19 @@ p {
 /* CTA BUTTON */
 .cta-button {
   display: inline-block;
-  color: #ff6b81;
-  border: 2px solid #ff6b81;
+  color: #1abc9c;
+  border: 2px solid #1abc9c;
   padding: 12px 25px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 8px #ff6b81, 0 0 16px #ff6b81;
+  box-shadow: 0 0 8px #1abc9c, 0 0 16px #16a085;
 }
 .cta-button:hover {
-  background: #ff6b81;
+  background: #1abc9c;
   color: #ffffff;
-  box-shadow: 0 0 16px #ff6b81, 0 0 24px #ff6b81;
+  box-shadow: 0 0 16px #1abc9c, 0 0 24px #16a085;
 }
 
 /* SECTION LAYOUT */
@@ -74,7 +74,7 @@ section {
 section h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  border-bottom: 2px solid #ff6b81;
+  border-bottom: 2px solid #1abc9c;
   padding-bottom: 10px;
 }
 
@@ -90,18 +90,18 @@ section h2 {
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for projects */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 107, 129, 0.2);
+  box-shadow: 0 0 10px rgba(26, 26, 46, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 107, 129, 0.4);
+  box-shadow: 0 0 20px rgba(26, 26, 46, 0.4);
 }
 .project img {
   max-width: 100%;
   height: auto;
-  border: 3px solid #ff6b81;
-  box-shadow: 0 0 8px #ff6b81, 0 0 16px #ff6b81;
+  border: 3px solid #1abc9c;
+  box-shadow: 0 0 8px #1abc9c, 0 0 16px #16a085;
   border-radius: 4px;
   margin-bottom: 15px;
 }
@@ -118,19 +118,19 @@ section h2 {
 .project-links a {
   display: inline-block;
   margin-right: 15px;
-  border: 2px solid #ff6b81;
+  border: 2px solid #1abc9c;
   padding: 8px 18px;
-  color: #ff6b81;
+  color: #1abc9c;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-  box-shadow: 0 0 5px #ff6b81, 0 0 10px #ff6b81;
+  box-shadow: 0 0 5px #1abc9c, 0 0 10px #16a085;
 }
 .project-links a:hover {
-  background-color: #ff6b81;
+  background-color: #1abc9c;
   color: #ffffff;
-  box-shadow: 0 0 10px #ff6b81, 0 0 20px #ff6b81;
+  box-shadow: 0 0 10px #1abc9c, 0 0 20px #16a085;
 }
 
 /* CONTACT SECTION */
@@ -139,7 +139,7 @@ section h2 {
   line-height: 1.8;
 }
 #contact a {
-  color: #ff6b81;
+  color: #1abc9c;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
