@@ -1,143 +1,218 @@
-/* General Body Styling */
+/* Use a modern, clean font like Lato (linked in HTML) */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Header Styling */
-header {
-    text-align: center;
-    background: #343a40;
-    color: white;
-    padding: 20px 0;
+/* HERO SECTION */
+.hero {
+  /* You can replace the background image with a gradient or a solid color if you prefer */
+  background: url('https://picsum.photos/1200/800?grayscale') center/cover no-repeat;
+  /* Example fallback color if image fails */
+  background-color: #343a40;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
 }
 
-header a {
-    color: #007BFF;
-    text-decoration: none;
+.hero::before {
+  /* A dark overlay over the hero image */
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: 1;
 }
 
-/* Main Content Styling */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Above the overlay */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-title span {
+  color: #00b4d8; /* Accent color */
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-contacts {
+  margin-bottom: 30px;
+}
+
+/* CTA Button under hero */
+.cta-btn {
+  display: inline-block;
+  background-color: #00b4d8;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #0077b6;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #00b4d8;
+}
+
+/* MAIN CONTENT */
 main {
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* Section Styling */
+/* Sections */
 section {
-    margin: 20px 0;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
-    border-bottom: 2px solid #007BFF;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    color: #007BFF;
+  border-bottom: 2px solid #00b4d8;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #00b4d8;
 }
 
-/* Skills Section Styling */
+/* About Me might not need special styling beyond the section defaults */
+#about-me p {
+  font-size: 1rem;
+}
+
+/* SKILLS */
 .skills {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .skills .technical,
 .skills .interpersonal {
-    flex: 1;
-    min-width: 300px;
+  flex: 1 1 300px;
+  min-width: 300px;
 }
 
-.skills img {
-    width: 60px; /* Adjust size for better visibility */
-    height: 60px;
-    margin: 10px;
-    object-fit: contain; /* Ensures the images retain their aspect ratio */
+.skill-logos img {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  object-fit: contain;
+  transition: transform 0.3s;
 }
 
-.skills .technical {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.skill-logos img:hover {
+  transform: scale(1.1);
 }
 
-.skills .interpersonal {
-    text-align: left;
-    padding-left: 10px;
+/* PROJECTS */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
 }
 
-/* Project Section Styling */
-.project {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+.project-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project h3 {
-    color: #007BFF;
-    margin-bottom: 10px;
+.project-card h3 {
+  color: #00b4d8;
+  margin-bottom: 10px;
 }
 
-.project p {
-    margin: 0;
-    color: #333;
+.project-card p {
+  color: #444;
 }
 
-/* Table of Contents Styling */
-nav {
-    background: #f8f9fa;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+/* Hover effect for project cards */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-nav h2 {
-    margin-bottom: 10px;
-    color: #007BFF;
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background-color: #f1f1f1;
+  color: #555;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 5px 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #007BFF;
-}
-
-/* Responsive Design */
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 768px) {
-    .skills {
-        flex-direction: column;
-        align-items: center;
-    }
-    .skills .technical,
-    .skills .interpersonal {
-        text-align: center;
-        padding-left: 0;
-    }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .navbar li {
+    display: block;
+    margin: 10px 0;
+  }
+  .skills {
+    flex-direction: column;
+  }
+  main {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
 }
-
