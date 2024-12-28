@@ -1,263 +1,194 @@
 /* 
-  GLOBAL STYLES 
-  -------------
+  Global Reset & Fonts 
+  (optional but recommended)
 */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+/* 
+  Body with a dark gradient background 
+*/
+body {
+  font-family: Arial, sans-serif; /* use your preferred font */
+  background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+  color: #ffffff; /* text color on dark background */
+  line-height: 1.5;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-/* Accent color for neon effect */
-.accent {
-  color: #ff3399; /* Neon pink */
-}
-
-/* Link resets */
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 /*
-  SOCIAL BAR 
-  ----------
-  Left side vertical icons
+  Headings: 
+  Make them pop with a neon or bright accent color 
 */
-.social-bar {
-  position: fixed;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  z-index: 999;
-}
-.social-bar a {
-  font-size: 1.5rem;
-  color: #ff3399;
-  transition: color 0.3s;
-}
-.social-bar a:hover {
-  color: #fff;
-}
-
-/*
-  HERO SECTION 
-  ------------
-  Big intro area with text on left, image on right
-*/
-.hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px;
-  /* If you want a min-height hero:
-  min-height: 100vh; 
-  */
-}
-.hero-content {
-  max-width: 500px;
-}
-
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.hero-content h2 {
-  font-size: 1.4rem;
-  color: #ff3399;
-  margin-bottom: 20px;
-}
-.hero-description {
-  font-size: 1rem;
-  margin-bottom: 30px;
-  color: #ccc;
-}
-
-/* CTA Button */
-.cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  border: 2px solid #ff3399;
-  color: #ff3399;
-  font-weight: 600;
-  border-radius: 4px;
-  transition: 0.3s;
-}
-.cta-button:hover {
-  background: #ff3399;
-  color: #fff;
-}
-
-/* The angled photo with neon border */
-.hero-image-wrapper {
-  position: relative;
-  max-width: 300px;
-  transform: rotate(5deg);
-  box-shadow: 0 0 15px #ff3399;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.hero-image-wrapper:hover {
-  transform: rotate(5deg) scale(1.05);
-  box-shadow: 0 0 25px #ff3399;
-}
-.hero-image {
-  width: 100%;
-  border: 3px solid #ff3399;
-  display: block;
-}
-
-/*
-  ABOUT SECTION
-  -------------
-*/
-.about-section {
-  padding: 60px;
-  text-align: center;
-}
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #ff3399;
-}
-.timeline {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.timeline-box {
-  width: 30%;
-  min-width: 250px;
-}
-.timeline-box h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #ff3399;
-}
-.timeline-box p {
-  color: #ccc;
-}
-
-/*
-  PROJECTS SECTION
-  ----------------
-*/
-.projects-section {
-  padding: 60px;
-}
-.projects-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #ff3399;
-}
-
-/* 
-  Each project row 
-  (image on left, description on right, or vice versa)
-*/
-.project-item {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 40px;
-  align-items: center;
-}
-.project-image {
-  width: 300px;
-  border: 3px solid #ff3399;
-  box-shadow: 0 0 15px #ff3399;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.project-image:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 25px #ff3399;
-}
-.project-details {
-  flex: 1;
-  max-width: 600px;
-}
-.project-details h3 {
-  font-size: 1.8rem;
-  color: #ff3399;
-  margin-bottom: 10px;
-}
-.project-details .tech-stack strong {
-  color: #ff3399;
-}
-.project-details p {
-  color: #ccc;
+h1, h2, h3, h4, h5, h6 {
+  color: #ff3399; /* Neon pink accent */
   margin-bottom: 15px;
 }
 
-/* Buttons for Live / GitHub */
+/*
+  Links & Hover
+*/
+a {
+  color: #ff3399;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #fff; /* On hover, switch text to white */
+}
+
+/*
+  Section container: 
+  Provide padding + maybe a subtle background 
+  (You can keep it transparent if you prefer)
+*/
+section {
+  padding: 50px 20px;
+  /* optional: a semi-transparent black background
+     background: rgba(0,0,0,0.3); 
+  */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*
+  "About Me" heading styles
+*/
+#about-me, #about, .about-section {
+  /* You can rename or unify your section IDs/classes */
+}
+
+/*
+  For visual separation between sections 
+  (like that bottom border that used to be blue):
+*/
+section h2 {
+  border-bottom: 2px solid #ff3399;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/*
+  Basic paragraph styling
+*/
+p {
+  color: #cccccc; /* lighter gray text for better readability */
+  margin-bottom: 15px;
+}
+
+/*
+  Example "Hero" or top section styling
+*/
+header, .hero-section {
+  padding: 60px 20px;
+  text-align: center;
+  /* keep background same as body if you want 
+     or use a slightly different gradient if you want variation
+  */
+}
+
+/* For that big "Hello! I am Your Name" text */
+header h1, .hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* White or accent, up to you */
+}
+header h2 {
+  font-size: 1.5rem;
+  color: #ff3399; /* or #fff if you prefer */
+  margin-bottom: 20px;
+}
+
+/*
+  Any CTA button 
+*/
+.cta-button, .btn, a.cta {
+  display: inline-block;
+  background: transparent;
+  color: #ff3399;
+  border: 2px solid #ff3399;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.cta-button:hover, .btn:hover, a.cta:hover {
+  background: #ff3399;
+  color: #ffffff;
+}
+
+/*
+  Projects Section
+  You mentioned images + project titles, etc.
+*/
+#projects, .projects-section {
+  /* same idea as above, just a container */
+}
+.project {
+  margin-bottom: 40px; /* space between projects */
+}
+.project img {
+  max-width: 300px; /* or whatever you like */
+  margin-bottom: 15px;
+  border: 3px solid #ff3399; /* neon border if you want */
+  box-shadow: 0 0 15px #ff3399; /* neon glow effect */
+}
+.project h3 {
+  /* heading for each project */
+  margin: 10px 0;
+  color: #ffffff; 
+}
+.project p {
+  margin-bottom: 10px;
+  color: #cccccc;
+}
+
+/*
+  "Live" / "GitHub" links 
+  (turn them into small neon-outlined buttons)
+*/
 .project-links a {
   display: inline-block;
   margin-right: 10px;
-  padding: 10px 20px;
-  color: #ff3399;
+  padding: 8px 16px;
   border: 2px solid #ff3399;
+  color: #ff3399;
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 .project-links a:hover {
   background-color: #ff3399;
-  color: #fff;
+  color: #ffffff;
 }
 
 /*
-  FOOTER 
-  ------
+  Footer 
 */
-.footer-section {
-  padding: 20px;
+footer {
   text-align: center;
-  color: #aaa;
-  font-size: 0.9rem;
+  padding: 20px;
+  color: #bbbbbb;
+  background: rgba(0,0,0,0.2);
 }
 
-/*
-  MEDIA QUERIES
-  -------------
-  Adjust layout for smaller screens
+/* 
+  Responsive adjustments 
 */
 @media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  h1 {
+    font-size: 2rem;
   }
-  .hero-content {
-    margin-bottom: 40px;
+  section {
+    padding: 30px 15px;
   }
-  .hero-image-wrapper {
-    transform: rotate(0deg);
-    margin-bottom: 20px;
-  }
-
-  .timeline {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-item {
-    flex-direction: column;
-    text-align: center;
-  }
-  .project-image {
-    margin: 0 auto;
-  }
-  .project-details {
-    max-width: none;
+  /* Adjust images or layout so they fit smaller screens */
+  .project img {
+    max-width: 100%;
   }
 }
 
