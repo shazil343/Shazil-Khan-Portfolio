@@ -4,151 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Neon Portfolio</title>
-  
-  <!-- Google Fonts: Poppins -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" 
-    rel="stylesheet" 
-  />
-  
-  <!-- Font Awesome for social icons (optional) -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-    integrity="sha512-Fo3rlrZj/k7ujTnH2N2C3b+61rCy8Xt1ZKg5HchhDXWjRJ5Qg+en+DCNYNtV+mw3Z8f6W5ld1T+yR0SYVxZf2A==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer"
-  />
-
-  <!-- Link to Your Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- SIDE SOCIAL BAR (optional) -->
-  <div class="social-bar">
-    <a href="mailto:youremail@example.com" target="_blank" title="Email">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/your-profile" target="_blank" title="LinkedIn">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://github.com/yourusername" target="_blank" title="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-  </div>
 
-  <!-- HERO SECTION -->
-  <header class="hero-section">
-    <div class="hero-content">
-      <h1>Hello! I am <span class="accent">Your Name</span></h1>
-      <h2>Software Engineer ● UI/UX Designer</h2>
-      <p class="hero-description">
-        I'm a passionate software engineer based in [Your Location].  
-        Currently studying [Your Major], also working as [Your Role]...  
-        (Describe yourself in a sentence or two!)
-      </p>
-      <a 
-        href="#" 
-        class="cta-button" 
-        title="Download Resume"
-        >
-        Get my resume
-      </a>
-    </div>
-
-    <!-- Rotated Image / Photo -->
-    <div class="hero-image-wrapper">
-      <!-- Replace 'your-photo.png' with your actual image path -->
-      <img src="your-photo.png" alt="Your Photo" class="hero-image" />
-    </div>
+  <!-- Hero / Intro -->
+  <header>
+    <h1>Hello! I am Your Name</h1>
+    <h2>Software Engineer ● UI/UX Designer</h2>
+    <p>I'm a passionate software engineer based in [Your Location]. 
+       Currently studying [Your Major], also working as [Your Role]... 
+       (Short intro about yourself!)
+    </p>
+    <a href="#" class="cta-button">Get my resume</a>
   </header>
 
-  <!-- ABOUT SECTION -->
-  <section class="about-section" id="about">
+  <!-- About Section -->
+  <section id="about-me">
     <h2>About My</h2>
-    <div class="timeline">
-      <div class="timeline-box">
-        <h3>Past</h3>
-        <p>
-          Share your background story: how you got started, your early experiences, etc.
-        </p>
-      </div>
-      <div class="timeline-box">
-        <h3>Present</h3>
-        <p>
-          What you're doing now: current studies, job/internship, personal projects, etc.
-        </p>
-      </div>
-      <div class="timeline-box">
-        <h3>Future</h3>
-        <p>
-          Talk about your goals, what you're excited to learn, or next steps in your career.
-        </p>
-      </div>
-    </div>
+    <h3>Past</h3>
+    <p>How you got started, early experiences...</p>
+    <h3>Present</h3>
+    <p>What you're doing now: job, internship, etc.</p>
+    <h3>Future</h3>
+    <p>Where you're headed: goals, aspirations...</p>
   </section>
 
-  <!-- PROJECTS SECTION -->
-  <section class="projects-section" id="projects">
+  <!-- Projects Section -->
+  <section id="projects">
     <h2>Projects</h2>
 
-    <!-- Project Item -->
-    <div class="project-item">
-      <!-- Replace 'project-mockup.png' with your project screenshot or mockup -->
-      <img src="project-mockup.png" alt="Project Screenshot" class="project-image" />
-      <div class="project-details">
-        <h3>Arabic Poetry</h3>
-        <p class="tech-stack">
-          Made with: <strong>TypeScript, Next.js, AWS</strong>
-        </p>
-        <p>
-          The Arabic Poetry Platform offers ... (Describe your project here).
-        </p>
-        <div class="project-links">
-          <a 
-            href="https://arabic-poetry.net" 
-            class="btn-live" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >Live</a>
-          <a 
-            href="https://github.com/yourusername/ArabicPoetry" 
-            class="btn-repo" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >GitHub</a>
-        </div>
+    <div class="project">
+      <img src="project1.png" alt="Project Screenshot">
+      <h3>Arabic Poetry</h3>
+      <p class="tech-stack">Made with: <strong>TypeScript, Next.js, AWS</strong></p>
+      <p>The Arabic Poetry Platform offers... (Describe your project here)</p>
+      <div class="project-links">
+        <a href="#" target="_blank">Live</a>
+        <a href="#" target="_blank">GitHub</a>
       </div>
     </div>
 
-    <!-- Duplicate .project-item for additional projects -->
-    <!-- Another Project Example -->
-    <div class="project-item">
-      <img src="project2.png" alt="Project 2 Screenshot" class="project-image" />
-      <div class="project-details">
-        <h3>My Awesome App</h3>
-        <p class="tech-stack">
-          Made with: <strong>React, Node.js, MongoDB</strong>
-        </p>
-        <p>
-          Brief project description...
-        </p>
-        <div class="project-links">
-          <a href="#" class="btn-live">Live</a>
-          <a href="#" class="btn-repo">GitHub</a>
-        </div>
+    <div class="project">
+      <img src="project2.png" alt="Project 2 Screenshot">
+      <h3>My Awesome App</h3>
+      <p class="tech-stack">Made with: <strong>React, Node.js, MongoDB</strong></p>
+      <p>Brief project description...</p>
+      <div class="project-links">
+        <a href="#" target="_blank">Live</a>
+        <a href="#" target="_blank">GitHub</a>
       </div>
     </div>
+
   </section>
 
-  <!-- FOOTER (optional) -->
-  <footer class="footer-section">
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Your Name — All rights reserved.</p>
   </footer>
-</body>
-</html>
 
+</body>
 </html>
 
 
