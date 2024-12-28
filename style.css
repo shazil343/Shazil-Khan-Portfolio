@@ -9,7 +9,7 @@
 
 body {
   /* Subdued Gradient Background */
-  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  background: linear-gradient(100deg, #1a1a2e, #16213e, #0f3460);
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
