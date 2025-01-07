@@ -101,7 +101,7 @@ section ul, section ol {
   width: 100%;
   max-width: 600px; /* Reduced from 800px to 600px */
   height: auto;
-  max-height: 250px; /* Added to constrain height */
+  max-height: 300px; /* Added to constrain height */
   object-fit: contain; /* Maintains aspect ratio without cropping */
   border: 2px solid #1abc9c;
   border-radius: 8px;
