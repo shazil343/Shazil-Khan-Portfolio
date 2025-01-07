@@ -133,6 +133,18 @@ section h2 {
   box-shadow: 0 0 10px #1abc9c, 0 0 20px #16a085;
 }
 
+/* SKILLS SECTION */
+#skills {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+#skills ul {
+  list-style: inside square;
+  margin-left: 20px;
+}
+
 /* CONTACT SECTION */
 #contact p {
   font-size: 1.1rem;
