@@ -13,194 +13,205 @@ body {
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  padding-top: 60px; /* To accommodate fixed navbar if added */
 }
 
-/* HEADINGS & TEXT */
-h1, h2, h3 {
-  color: #1abc9c; /* Teal accent for headings */
-  text-shadow: 0 0 3px #1abc9c, 0 0 7px #16a085;
-}
-p {
-  color: #d1d1d1; /* Light gray for body text */
-}
-
-/* HERO SECTION */
+/* HERO / INTRO SECTION */
 .hero-section {
   text-align: center;
-  padding: 80px 20px;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
 }
+
 .hero-section h1 {
-  font-size: 3rem;
-  color: #ffffff; /* White for main heading */
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
+
 .hero-section h2 {
-  font-size: 1.75rem;
-  color: #1abc9c;
+  font-size: 1.8rem;
   margin-bottom: 20px;
 }
+
 .hero-section p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  max-width: 700px;
-  margin: 0 auto 30px; /* center the paragraph */
-}
-
-/* CTA BUTTON */
-.cta-button {
-  display: inline-block;
-  color: #1abc9c;
-  border: 2px solid #1abc9c;
-  padding: 12px 25px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 8px #1abc9c, 0 0 16px #16a085;
-}
-.cta-button:hover {
-  background: #1abc9c;
-  color: #ffffff;
-  box-shadow: 0 0 16px #1abc9c, 0 0 24px #16a085;
-}
-
-/* SECTION LAYOUT */
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
+  font-size: 1.2rem;
+  color: #d1d1d1;
+  max-width: 800px;
   margin: 0 auto;
 }
+
+/* SECTION HEADINGS */
 section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  border-bottom: 2px solid #1abc9c;
-  padding-bottom: 10px;
-}
-
-/* ABOUT SECTION */
-#about p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-/* PROJECTS */
-.project {
-  margin-bottom: 60px;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for projects */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(26, 26, 46, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(26, 26, 46, 0.4);
-}
-.project img {
-  max-width: 100%;
-  height: auto;
-  border: 3px solid #1abc9c;
-  box-shadow: 0 0 8px #1abc9c, 0 0 16px #16a085;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-.project h3 {
-  font-size: 1.75rem;
-  margin-bottom: 15px;
-  color: #ffffff;
-}
-.project p {
-  font-size: 1.05rem;
+  font-size: 2rem;
   margin-bottom: 20px;
-  line-height: 1.7;
+  border-bottom: 2px solid #1abc9c;
+  display: inline-block;
+  padding-bottom: 5px;
 }
+
+/* GENERAL SECTION STYLES */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section p, section ul, section ol {
+  font-size: 1.05rem;
+  color: #d1d1d1;
+}
+
+section ul, section ol {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* PROJECTS SECTION */
+.project {
+  margin-bottom: 40px;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: 2px solid #1abc9c;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project-links {
+  margin-top: 10px;
+}
+
 .project-links a {
   display: inline-block;
-  margin-right: 15px;
-  border: 2px solid #1abc9c;
-  padding: 8px 18px;
-  color: #1abc9c;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 5px #1abc9c, 0 0 10px #16a085;
-}
-.project-links a:hover {
   background-color: #1abc9c;
   color: #ffffff;
-  box-shadow: 0 0 10px #1abc9c, 0 0 20px #16a085;
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.project-links a:hover {
+  background-color: #16a085;
+  box-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c;
 }
 
 /* SKILLS SECTION */
-#skills {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
 #skills ul {
-  list-style: inside square;
-  margin-left: 20px;
+  list-style-type: disc;
+}
+
+#skills li {
+  margin-bottom: 10px;
+}
+
+/* CTA SECTION */
+#cta {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #16213e; /* Darker shade for distinction */
+}
+
+#cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+#cta p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.05rem;
+  color: #d1d1d1;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-buttons .btn {
+  /* Inherits styles from .btn */
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  background-color: #1abc9c;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background-color: #16a085;
+  box-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c;
 }
 
 /* CONTACT SECTION */
-#contact p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
 #contact a {
   color: #1abc9c;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
 }
+
 #contact a:hover {
-  color: #ffffff;
+  text-decoration: underline;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
+  background: rgba(0,0,0,0.5); /* Subtle dark overlay */
   color: #aaaaaa;
-  background: rgba(0,0,0,0.3); /* Subtle dark overlay */
   font-size: 0.9rem;
 }
 
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-  .hero-section {
-    padding: 60px 15px;
-  }
   .hero-section h1 {
-    font-size: 2.5rem;
-  }
-  .hero-section h2 {
-    font-size: 1.3rem;
-  }
-  .hero-section p {
-    font-size: 1rem;
-    max-width: 90%;
-  }
-  section {
-    padding: 40px 15px;
-  }
-  section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
   }
-  .project h3 {
+  
+  .hero-section h2 {
     font-size: 1.5rem;
   }
-  .project p, #about p, #contact p {
+  
+  .hero-section p {
     font-size: 1rem;
   }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+  
+  section p, section ul, section ol, .btn {
+    font-size: 1rem;
+  }
+  
   .project-links a {
-    padding: 6px 12px;
-    margin-right: 10px;
-    font-size: 0.9rem;
+    margin-right: 5px;
+    padding: 8px 16px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .cta-buttons .btn {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 300px;
   }
 }
 
