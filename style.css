@@ -47,19 +47,6 @@ body {
   margin: 0 auto;
 }
 
-.tagline {
-  font-size: 1.5rem;
-  color: #1abc9c;
-  margin-top: 20px;
-}
-
-.elevator-pitch {
-  font-size: 1.1rem;
-  color: #d1d1d1;
-  max-width: 700px;
-  margin: 10px auto;
-}
-
 /* PROFILE PHOTO */
 .profile-photo {
   width: 150px;
@@ -112,7 +99,7 @@ section ul, section ol {
 
 .project-image {
   width: 100%;
-  max-width: 800px;
+  max-width: 600px; /* Reduced from 800px to 600px */
   height: auto;
   border: 2px solid #1abc9c;
   border-radius: 8px;
@@ -146,16 +133,7 @@ section ul, section ol {
 }
 
 /* Achievements */
-.achievements {
-  margin-top: 10px;
-  list-style-type: disc;
-  padding-left: 20px;
-  color: #d1d1d1;
-}
-
-.achievements li {
-  margin-bottom: 5px;
-}
+/* Removed Achievements Metrics styling as they are no longer in HTML */
 
 /* SKILLS SECTION */
 #skills ul {
@@ -164,46 +142,6 @@ section ul, section ol {
 
 #skills li {
   margin-bottom: 10px;
-}
-
-/* TECHNOLOGIES & TOOLS */
-.tech-at-a-glance {
-  margin-top: 30px;
-}
-
-.tech-at-a-glance h3 {
-  font-size: 1.5rem;
-  color: #1abc9c;
-  margin-bottom: 20px;
-}
-
-.skill-icon {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s ease;
-}
-
-.skill-icon:hover {
-  transform: scale(1.1);
-}
-
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.tech {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tech p {
-  margin-top: 5px;
-  font-size: 1rem;
-  color: #d1d1d1;
 }
 
 /* CTA SECTION */
@@ -232,10 +170,6 @@ section ul, section ol {
   display: flex;
   justify-content: center;
   gap: 20px;
-}
-
-.cta-buttons .btn {
-  /* Inherits styles from .btn */
 }
 
 /* BUTTONS */
@@ -284,16 +218,8 @@ footer {
     font-size: 1.5rem;
   }
   
-  .hero-section p, .elevator-pitch {
+  .hero-section p {
     font-size: 1rem;
-  }
-  
-  .tagline {
-    font-size: 1.2rem;
-  }
-  
-  .elevator-pitch {
-    max-width: 500px;
   }
   
   section h2 {
