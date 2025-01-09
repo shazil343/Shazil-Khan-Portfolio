@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shazil Khan's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Lightbox2 CSS -->
@@ -56,6 +58,11 @@
         <li><a href="#projects" aria-label="Navigate to Projects Section">Projects</a></li>
         <li><a href="#contact" aria-label="Navigate to Contact Section">Contact</a></li>
       </ul>
+      <!-- Light/Dark Mode Toggle Button -->
+      <button id="theme-toggle" aria-label="Toggle Light/Dark Mode" class="theme-toggle">
+        <i id="theme-icon" class="bi bi-sun"></i>
+        <i class="bi bi-moon"></i>
+      </button>
     </div>
   </nav>
 
@@ -81,6 +88,7 @@
       My passion lies in bridging hardware and software to create innovative solutions.
     </p>
   </section>
+  <!-- End of About Section -->
 
   <!-- SKILLS SECTION -->
   <section id="skills">
@@ -91,6 +99,14 @@
       <li><strong>Collaboration:</strong> Effective communicator in cross-functional teams</li>
       <li><strong>Technical:</strong> Familiar with OpenCV, mechanical design fundamentals, rapid prototyping</li>
     </ul>
+    <!-- Tech Stack Icon Grid -->
+    <div class="tech-stack" data-aos="fade-up" data-aos-delay="100">
+      <img src="icons/python.png" alt="Python Logo" title="Python" class="tech-icon" loading="lazy" />
+      <img src="icons/java.png" alt="Java Logo" title="Java" class="tech-icon" loading="lazy" />
+      <img src="icons/github.svg" alt="GitHub Logo" title="Git/GitHub" class="tech-icon" loading="lazy" />
+      <img src="icons/opencv.png" alt="OpenCV Logo" title="OpenCV" class="tech-icon" loading="lazy" />
+      <!-- Add more icons as needed -->
+    </div>
   </section>
   <!-- End of Skills Section -->
 
@@ -291,6 +307,50 @@
 
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <!-- Theme Toggle JS -->
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+      document.body.classList.add(currentTheme);
+      if (currentTheme === 'dark-mode') {
+        // Change to moon icon
+        themeIcon.classList.remove('bi-sun');
+        themeIcon.classList.add('bi-moon');
+      } else {
+        // Change to sun icon
+        themeIcon.classList.remove('bi-moon');
+        themeIcon.classList.add('bi-sun');
+      }
+    } else {
+      // If no theme is set, check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark-mode');
+        themeIcon.classList.remove('bi-sun');
+        themeIcon.classList.add('bi-moon');
+      } else {
+        themeIcon.classList.remove('bi-moon');
+        themeIcon.classList.add('bi-sun');
+      }
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      let theme = 'light-mode';
+      if (document.body.classList.contains('dark-mode')) {
+        theme = 'dark-mode';
+        themeIcon.classList.remove('bi-sun');
+        themeIcon.classList.add('bi-moon');
+      } else {
+        themeIcon.classList.remove('bi-moon');
+        themeIcon.classList.add('bi-sun');
+      }
+      localStorage.setItem('theme', theme);
     });
   </script>
 
