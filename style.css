@@ -60,11 +60,12 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.7);
-  padding: 10px 20px;
+  background: rgba(0,0,0,0.8);
+  padding: 15px 20px; /* Increased padding */
   z-index: 999;
   display: flex;
   justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-container {
@@ -76,14 +77,14 @@ body {
 }
 
 .nav-logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Increased font size */
   font-weight: bold;
   color: #fff;
 }
 
 .nav-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Increased size */
   background: none;
   border: none;
   color: #fff;
@@ -100,11 +101,13 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  font-size: 1.1rem; /* Increased font size */
+  transition: color 0.3s, font-size 0.3s;
 }
 
 .nav-links li a:hover {
   color: #1abc9c;
+  font-size: 1.15rem; /* Slight increase on hover */
 }
 
 /* Responsive Navigation */
@@ -115,10 +118,10 @@ body {
 
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 60px; /* Adjusted to match navbar height */
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.95);
     flex-direction: column;
     align-items: center;
     max-height: 0;
@@ -132,6 +135,10 @@ body {
 
   .nav-links li {
     margin: 15px 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem; /* Larger font for mobile */
   }
 }
 
@@ -161,25 +168,6 @@ body {
   margin-top: 10px;
   min-height: 30px; /* To prevent layout shift */
 }
-
-/* PROFILE PHOTO */
-/* (If you decide to include a profile photo) */
-/*
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #1abc9c;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-photo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(26, 188, 156, 0.6);
-}
-*/
 
 /* SECTION HEADINGS */
 section h2 {
@@ -276,60 +264,6 @@ section ul, section ol {
   background-color: #16a085;
   box-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c;
   transform: translateY(-2px);
-}
-
-/* Modals */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2000; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-}
-
-.modal-content {
-  background-color: #1a1a2e;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 700px;
-  border-radius: 8px;
-  position: relative;
-  color: #ffffff;
-}
-
-.modal-content h3 {
-  margin-bottom: 15px;
-}
-
-.modal-content .modal-image {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-
-.close {
-  color: #aaa;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: #1abc9c;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* CTA SECTION */
@@ -448,19 +382,6 @@ footer {
   transform: scale(1.1);
 }
 
-/* Modals */
-.modal {
-  /* Already defined above */
-}
-
-.modal-content {
-  /* Already defined above */
-}
-
-.close {
-  /* Already defined above */
-}
-
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
   .nav-links {
@@ -518,5 +439,4 @@ footer {
     padding: 0 20px;
   }
 }
-
 
