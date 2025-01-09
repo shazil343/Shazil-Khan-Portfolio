@@ -119,19 +119,6 @@
       <div class="project-links">
         <a href="https://github.com/shazil343/drone-pursuit-tracking" target="_blank" class="btn">GitHub Repository</a>
         <a href="https://shazil343.github.io/drone-pursuit-tracking/" target="_blank" class="btn">Live Project</a>
-        <button class="btn details-btn" data-modal="modal-drone">View Details</button>
-      </div>
-    </div>
-
-    <!-- Modal for Project 1 -->
-    <div id="modal-drone" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Drone Pursuit Tracking Project (SkyPro)</h3>
-        <img src="drone_pursuit_tracking_large.png" alt="Drone Pursuit Tracking Project Large Screenshot" class="modal-image" />
-        <p>
-          Detailed information about the Drone Pursuit Tracking Project. Explain the technologies used, challenges faced, and solutions implemented. Include any additional screenshots or videos if available.
-        </p>
       </div>
     </div>
 
@@ -149,19 +136,6 @@
       <div class="project-links">
         <a href="https://github.com/shazil343/pacman-game" target="_blank" class="btn">GitHub Repository</a>
         <a href="https://shazil343.github.io/pacman-game/" target="_blank" class="btn">Live Project</a>
-        <button class="btn details-btn" data-modal="modal-pacman">View Details</button>
-      </div>
-    </div>
-
-    <!-- Modal for Project 2 -->
-    <div id="modal-pacman" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Pac-Man Game</h3>
-        <img src="pacman_large.png" alt="Pac-Man Game Project Large Screenshot" class="modal-image" />
-        <p>
-          Detailed information about the Pac-Man Game Project. Discuss your role, the technologies used, challenges overcome, and any notable features or achievements.
-        </p>
       </div>
     </div>
 
@@ -178,19 +152,6 @@
       <div class="project-links">
         <a href="https://github.com/shazil343/snake-game" target="_blank" class="btn">GitHub Repository</a>
         <a href="https://shazil343.github.io/snake-game/" target="_blank" class="btn">Live Project</a>
-        <button class="btn details-btn" data-modal="modal-snake">View Details</button>
-      </div>
-    </div>
-
-    <!-- Modal for Project 3 -->
-    <div id="modal-snake" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Snake Game</h3>
-        <img src="snake_game_large.png" alt="Snake Game Project Large Screenshot" class="modal-image" />
-        <p>
-          Detailed information about the Snake Game Project. Explain the design decisions, technologies used, and any unique features or challenges faced during development.
-        </p>
       </div>
     </div>
 
@@ -208,19 +169,6 @@
       <div class="project-links">
         <a href="https://github.com/shazil343/crane-design" target="_blank" class="btn">GitHub Repository</a>
         <a href="https://shazil343.github.io/crane-design/" target="_blank" class="btn">Live Project</a>
-        <button class="btn details-btn" data-modal="modal-crane">View Details</button>
-      </div>
-    </div>
-
-    <!-- Modal for Project 4 -->
-    <div id="modal-crane" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Crane Design</h3>
-        <img src="crane_design_large.png" alt="Crane Design Report Large Screenshot" class="modal-image" />
-        <p>
-          Detailed information about the Crane Design Project. Discuss the design process, the challenges faced, and the solutions implemented. Include diagrams, additional images, or relevant documentation as needed.
-        </p>
       </div>
     </div>
   </section>
@@ -236,7 +184,6 @@
     <div class="cta-buttons">
       <a href="mailto:shazil.khan@ucalgary.ca" class="btn">Email Me</a>
       <a href="https://www.linkedin.com/in/shazilfkhan" target="_blank" class="btn">Connect on LinkedIn</a>
-      <a href="resume.pdf" download class="btn">Download Resume</a>
     </div>
   </section>
   <!-- End of CTA Section -->
@@ -336,45 +283,6 @@
     });
   </script>
 
-  <!-- Modal Functionality JS -->
-  <script>
-    // Get all elements with class 'details-btn'
-    const detailsButtons = document.querySelectorAll('.details-btn');
-
-    // Get all modals
-    const modals = document.querySelectorAll('.modal');
-
-    // Get all close buttons
-    const closeButtons = document.querySelectorAll('.close');
-
-    // Add click event to each details button to open the corresponding modal
-    detailsButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-        if (modal) {
-          modal.style.display = 'block';
-        }
-      });
-    });
-
-    // Add click event to each close button to close the modal
-    closeButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.parentElement.parentElement.style.display = 'none';
-      });
-    });
-
-    // Add click event to window to close modal if clicked outside the modal content
-    window.addEventListener('click', (event) => {
-      modals.forEach(modal => {
-        if (event.target == modal) {
-          modal.style.display = 'none';
-        }
-      });
-    });
-  </script>
-
   <!-- Navigation Toggle JS -->
   <script>
     const navToggle = document.querySelector('.nav-toggle');
@@ -387,13 +295,6 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 
