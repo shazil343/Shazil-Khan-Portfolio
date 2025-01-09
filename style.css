@@ -11,13 +11,41 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  /* Light Theme Colors */
+  --bg-gradient: linear-gradient(100deg, #ffffff, #f0f0f0, #e0e0e0);
+  --text-color: #000000;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-text: #1abc9c;
+  --nav-hover: #16a085;
+  --section-bg: rgba(255, 255, 255, 0.7);
+  --button-bg: #1abc9c;
+  --button-hover: #16a085;
+  --footer-bg: rgba(255, 255, 255, 0.5);
+  --link-color: #1abc9c;
+}
+
 body {
-  /* Subdued Gradient Background */
-  background: linear-gradient(100deg, #1a1a2e, #16213e, #0f3460);
-  color: #ffffff;
+  background: var(--bg-gradient);
+  color: var(--text-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   padding-top: 60px; /* To accommodate fixed navbar */
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Theme Overrides */
+body.dark-mode {
+  --bg-gradient: linear-gradient(100deg, #1a1a2e, #16213e, #0f3460);
+  --text-color: #ffffff;
+  --nav-bg: rgba(0, 0, 0, 0.85);
+  --nav-text: #1abc9c;
+  --nav-hover: #16a085;
+  --section-bg: rgba(0, 0, 0, 0.7);
+  --button-bg: #1abc9c;
+  --button-hover: #16a085;
+  --footer-bg: rgba(0, 0, 0, 0.5);
+  --link-color: #1abc9c;
 }
 
 /* Scroll Progress Bar */
@@ -27,7 +55,7 @@ body {
   left: 0;
   width: 0%;
   height: 5px;
-  background-color: #1abc9c;
+  background-color: var(--nav-text);
   z-index: 1500;
   transition: width 0.25s ease-out;
 }
@@ -42,7 +70,7 @@ body {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #1abc9c;
+  background-color: var(--button-bg);
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -51,7 +79,7 @@ body {
 }
 
 #backToTopBtn:hover {
-  background-color: #16a085;
+  background-color: var(--button-hover);
   transform: scale(1.1);
 }
 
@@ -60,7 +88,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.85); /* Slightly increased opacity for better contrast */
+  background: var(--nav-bg); /* Updated to use CSS variable */
   padding: 10px 20px;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -77,7 +105,7 @@ body {
 .nav-logo {
   font-size: 1.8rem; /* Increased font size */
   font-weight: bold;
-  color: #1abc9c; /* Highlighted logo color */
+  color: var(--nav-text); /* Updated to use CSS variable */
 }
 
 .nav-toggle {
@@ -96,7 +124,7 @@ body {
 }
 
 .nav-links li a {
-  color: #ffffff;
+  color: var(--nav-text); /* Updated to use CSS variable */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
@@ -109,7 +137,7 @@ body {
   display: block;
   width: 0%;
   height: 2px;
-  background: #1abc9c;
+  background: var(--nav-text); /* Updated to use CSS variable */
   transition: width 0.3s;
 }
 
@@ -118,7 +146,43 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #1abc9c;
+  color: var(--nav-hover); /* Updated to use CSS variable */
+}
+
+/* Light/Dark Mode Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 20px;
+  color: var(--nav-text); /* Matches the nav text color */
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+.theme-toggle svg,
+.theme-toggle i {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle .bi-moon {
+  display: none; /* Hide moon icon by default */
+}
+
+body.dark-mode .bi-sun {
+  display: none; /* Hide sun icon in dark mode */
+}
+
+body.dark-mode .bi-moon {
+  display: inline; /* Show moon icon in dark mode */
 }
 
 /* Responsive Navigation */
@@ -132,7 +196,7 @@ body {
     top: 60px; /* Adjusted to match navbar height */
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.95);
+    background: var(--nav-bg); /* Updated to use CSS variable */
     flex-direction: column;
     align-items: center;
     max-height: 0;
@@ -157,25 +221,25 @@ body {
 .hero-section {
   text-align: center;
   padding: 120px 20px 60px; /* Increased top padding to accommodate navbar */
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  background: var(--section-bg); /* Updated to use CSS variable */
   position: relative;
 }
 
 .hero-section h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
+  text-shadow: 0 0 10px var(--nav-text), 0 0 20px var(--nav-text), 0 0 30px var(--nav-text);
 }
 
 .hero-section h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
+  text-shadow: 0 0 10px var(--nav-text), 0 0 20px var(--nav-text), 0 0 30px var(--nav-text);
 }
 
 .hero-section #typed-text {
   font-size: 1.2rem;
-  color: #1abc9c;
+  color: var(--nav-text); /* Updated to use CSS variable */
   margin-top: 10px;
   min-height: 30px; /* To prevent layout shift */
 }
@@ -184,7 +248,7 @@ body {
 section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  border-bottom: 2px solid #1abc9c;
+  border-bottom: 2px solid var(--nav-text); /* Updated to use CSS variable */
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -240,7 +304,7 @@ section ul, section ol {
   height: auto;
   max-height: 300px; /* Constrain height */
   object-fit: contain; /* Maintain aspect ratio without cropping */
-  border: 2px solid #1abc9c;
+  border: 2px solid var(--nav-text); /* Updated to use CSS variable */
   border-radius: 8px;
   margin-bottom: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -258,7 +322,7 @@ section ul, section ol {
 .project-links a,
 .project-links button {
   display: inline-block;
-  background-color: #1abc9c;
+  background-color: var(--button-bg); /* Updated to use CSS variable */
   color: #ffffff;
   padding: 10px 20px;
   margin-right: 10px;
@@ -272,8 +336,8 @@ section ul, section ol {
 
 .project-links a:hover,
 .project-links button:hover {
-  background-color: #16a085;
-  box-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c;
+  background-color: var(--button-hover); /* Updated to use CSS variable */
+  box-shadow: 0 0 10px var(--nav-text), 0 0 20px var(--nav-text); /* Updated to use CSS variable */
   transform: translateY(-2px);
 }
 
@@ -287,7 +351,7 @@ section ul, section ol {
 #cta h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  border-bottom: 2px solid #1abc9c;
+  border-bottom: 2px solid var(--nav-text); /* Updated to use CSS variable */
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -308,7 +372,7 @@ section ul, section ol {
 /* BUTTONS */
 .btn {
   display: inline-block;
-  background-color: #1abc9c;
+  background-color: var(--button-bg); /* Updated to use CSS variable */
   color: #ffffff;
   padding: 10px 20px;
   margin: 10px;
@@ -318,13 +382,13 @@ section ul, section ol {
 }
 
 .btn:hover {
-  background-color: #16a085;
-  box-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c;
+  background-color: var(--button-hover); /* Updated to use CSS variable */
+  box-shadow: 0 0 10px var(--nav-text), 0 0 20px var(--nav-text); /* Updated to use CSS variable */
 }
 
 /* CONTACT SECTION */
 #contact a {
-  color: #1abc9c;
+  color: var(--link-color); /* Updated to use CSS variable */
   text-decoration: none;
 }
 
@@ -357,7 +421,7 @@ section ul, section ol {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #1abc9c;
+  border-color: var(--nav-text); /* Updated to use CSS variable */
   outline: none;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -371,7 +435,7 @@ section ul, section ol {
 footer {
   text-align: center;
   padding: 20px;
-  background: rgba(0,0,0,0.5); /* Subtle dark overlay */
+  background: var(--footer-bg); /* Updated to use CSS variable */
   color: #aaaaaa;
   font-size: 0.9rem;
 }
