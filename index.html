@@ -9,16 +9,61 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Lightbox2 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Shazil Khan's Portfolio - Computer Science and Math student at the University of Calgary. Explore projects in software development and mechanical design.">
+  <meta name="keywords" content="Shazil Khan, Portfolio, Software Developer, Computer Science, Math, University of Calgary, Projects, Mechanical Design">
+  <meta name="author" content="Shazil Khan">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shazil Khan",
+    "url": "https://yourportfolio.com",
+    "image": "https://yourportfolio.com/profile_photo.jpg",
+    "sameAs": [
+      "https://github.com/shazil343",
+      "https://www.linkedin.com/in/shazilfkhan"
+    ],
+    "jobTitle": "Student",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "University of Calgary"
+    }
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Particle Background (Optional) -->
-  <!-- <div id="particles-js"></div> -->
-  
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" title="Go to top">↑</button>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="nav-logo">Shazil Khan</span>
+      <button class="nav-toggle" aria-label="Toggle Navigation">
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about" aria-label="Navigate to About Section">About</a></li>
+        <li><a href="#skills" aria-label="Navigate to Skills Section">Skills</a></li>
+        <li><a href="#projects" aria-label="Navigate to Projects Section">Projects</a></li>
+        <li><a href="#contact" aria-label="Navigate to Contact Section">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <!-- HERO / INTRO SECTION -->
   <header class="hero-section">
     <h1>Hello, I’m Shazil Khan</h1>
     <h2>University of Calgary Student</h2>
+    <div id="typed-text"></div> <!-- Typed Headline Placeholder -->
     <p>
       Welcome to my portfolio! I'm a dedicated student with concentrations in Computer Science and Math. 
       I have experience in software development, mechanical design, and problem-solving. 
@@ -46,7 +91,14 @@
       <li><strong>Collaboration:</strong> Effective communicator in cross-functional teams</li>
       <li><strong>Technical:</strong> Familiar with OpenCV, mechanical design fundamentals, rapid prototyping</li>
     </ul>
-    <!-- Removed Technologies & Tools Section -->
+    <!-- Tech Stack Icon Grid -->
+    <div class="tech-stack" data-aos="fade-up" data-aos-delay="100">
+      <img src="icons/python.png" alt="Python Logo" title="Python" class="tech-icon" loading="lazy" />
+      <img src="icons/java.png" alt="Java Logo" title="Java" class="tech-icon" loading="lazy" />
+      <img src="icons/github.svg" alt="GitHub Logo" title="Git/GitHub" class="tech-icon" loading="lazy" />
+      <img src="icons/opencv.png" alt="OpenCV Logo" title="OpenCV" class="tech-icon" loading="lazy" />
+      <!-- Add more icons as needed -->
+    </div>
   </section>
   <!-- End of Skills Section -->
 
@@ -64,10 +116,22 @@
         Developed a camera vision system using AI in Python to detect and track targets in real-time. 
         Leveraged OpenCV libraries and simulated Lidar data to enhance tracking accuracy and responsiveness.
       </p>
-      <!-- Removed Achievements Metrics -->
       <div class="project-links">
         <a href="https://github.com/shazil343/drone-pursuit-tracking" target="_blank" class="btn">GitHub Repository</a>
         <a href="https://shazil343.github.io/drone-pursuit-tracking/" target="_blank" class="btn">Live Project</a>
+        <button class="btn details-btn" data-modal="modal-drone">View Details</button>
+      </div>
+    </div>
+
+    <!-- Modal for Project 1 -->
+    <div id="modal-drone" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Drone Pursuit Tracking Project (SkyPro)</h3>
+        <img src="drone_pursuit_tracking_large.png" alt="Drone Pursuit Tracking Project Large Screenshot" class="modal-image" />
+        <p>
+          Detailed information about the Drone Pursuit Tracking Project. Explain the technologies used, challenges faced, and solutions implemented. Include any additional screenshots or videos if available.
+        </p>
       </div>
     </div>
 
@@ -82,10 +146,22 @@
         Integrated JavaFX for the GUI, implemented game mechanics, and developed features like leaderboards 
         and dynamic difficulty levels.
       </p>
-      <!-- Removed Achievements Metrics -->
       <div class="project-links">
         <a href="https://github.com/shazil343/pacman-game" target="_blank" class="btn">GitHub Repository</a>
         <a href="https://shazil343.github.io/pacman-game/" target="_blank" class="btn">Live Project</a>
+        <button class="btn details-btn" data-modal="modal-pacman">View Details</button>
+      </div>
+    </div>
+
+    <!-- Modal for Project 2 -->
+    <div id="modal-pacman" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Pac-Man Game</h3>
+        <img src="pacman_large.png" alt="Pac-Man Game Project Large Screenshot" class="modal-image" />
+        <p>
+          Detailed information about the Pac-Man Game Project. Discuss your role, the technologies used, challenges overcome, and any notable features or achievements.
+        </p>
       </div>
     </div>
 
@@ -99,10 +175,22 @@
         A classic Snake game implemented in Java. Control the snake to eat food, grow longer, and 
         avoid collisions.
       </p>
-      <!-- Removed Achievements Metrics -->
       <div class="project-links">
         <a href="https://github.com/shazil343/snake-game" target="_blank" class="btn">GitHub Repository</a>
         <a href="https://shazil343.github.io/snake-game/" target="_blank" class="btn">Live Project</a>
+        <button class="btn details-btn" data-modal="modal-snake">View Details</button>
+      </div>
+    </div>
+
+    <!-- Modal for Project 3 -->
+    <div id="modal-snake" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Snake Game</h3>
+        <img src="snake_game_large.png" alt="Snake Game Project Large Screenshot" class="modal-image" />
+        <p>
+          Detailed information about the Snake Game Project. Explain the design decisions, technologies used, and any unique features or challenges faced during development.
+        </p>
       </div>
     </div>
 
@@ -117,10 +205,22 @@
         constraints, and evaluation. Explores the mechanical engineering approach behind wind 
         turbine rotor assembly.
       </p>
-      <!-- Removed Achievements Metrics -->
       <div class="project-links">
         <a href="https://github.com/shazil343/crane-design" target="_blank" class="btn">GitHub Repository</a>
         <a href="https://shazil343.github.io/crane-design/" target="_blank" class="btn">Live Project</a>
+        <button class="btn details-btn" data-modal="modal-crane">View Details</button>
+      </div>
+    </div>
+
+    <!-- Modal for Project 4 -->
+    <div id="modal-crane" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Crane Design</h3>
+        <img src="crane_design_large.png" alt="Crane Design Report Large Screenshot" class="modal-image" />
+        <p>
+          Detailed information about the Crane Design Project. Discuss the design process, the challenges faced, and the solutions implemented. Include diagrams, additional images, or relevant documentation as needed.
+        </p>
       </div>
     </div>
   </section>
@@ -136,6 +236,7 @@
     <div class="cta-buttons">
       <a href="mailto:shazil.khan@ucalgary.ca" class="btn">Email Me</a>
       <a href="https://www.linkedin.com/in/shazilfkhan" target="_blank" class="btn">Connect on LinkedIn</a>
+      <a href="resume.pdf" download class="btn">Download Resume</a>
     </div>
   </section>
   <!-- End of CTA Section -->
@@ -149,13 +250,36 @@
       or connect with me on 
       <a href="https://www.linkedin.com/in/shazilfkhan" target="_blank">LinkedIn</a>.
     </p>
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="_replyto" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
   <!-- End of Contact Section -->
 
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Shazil Khan — All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://github.com/shazil343" target="_blank" aria-label="GitHub">
+        <img src="icons/github.svg" alt="GitHub" class="social-icon" loading="lazy" />
+      </a>
+      <a href="https://www.linkedin.com/in/shazilfkhan" target="_blank" aria-label="LinkedIn">
+        <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon" loading="lazy" />
+      </a>
+      <!-- Add more social icons as needed -->
+    </div>
   </footer>
+  <!-- End of Footer -->
 
   <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -170,22 +294,96 @@
   <!-- Lightbox2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
-  <!-- Optional: Particle.js -->
-  <!--
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
   <script>
-    particlesJS("particles-js", {
-      // Particle.js configuration
+    var typed = new Typed('#typed-text', {
+      strings: [
+        "A Computer Science & Math Enthusiast.",
+        "A Passionate Problem-Solver.",
+        "An Aspiring AI Developer."
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
     });
   </script>
-  -->
 
-  <!-- Optional: Easter Egg JS -->
-  <!--
+  <!-- Scroll Progress Bar JS -->
   <script>
-    // Konami Code implementation
+    window.onscroll = function() {
+      scrollProgressFunction(); // Existing scroll progress function
+      scrollFunction(); // Existing back to top function
+    };
+
+    function scrollProgressFunction() {
+      const scrollProgress = document.getElementById("scrollProgress");
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      scrollProgress.style.width = scrolled + "%";
+    }
   </script>
-  -->
+
+  <!-- Back to Top Button JS -->
+  <script>
+    //Get the button
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    // When the user clicks on the button, scroll to the top of the document
+    backToTopBtn.addEventListener('click', function(){
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  </script>
+
+  <!-- Modal Functionality JS -->
+  <script>
+    // Get all elements with class 'details-btn'
+    const detailsButtons = document.querySelectorAll('.details-btn');
+
+    // Get all modals
+    const modals = document.querySelectorAll('.modal');
+
+    // Get all close buttons
+    const closeButtons = document.querySelectorAll('.close');
+
+    // Add click event to each details button to open the corresponding modal
+    detailsButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.style.display = 'block';
+        }
+      });
+    });
+
+    // Add click event to each close button to close the modal
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.parentElement.style.display = 'none';
+      });
+    });
+
+    // Add click event to window to close modal if clicked outside the modal content
+    window.addEventListener('click', (event) => {
+      modals.forEach(modal => {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  <!-- Navigation Toggle JS -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
