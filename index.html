@@ -281,6 +281,15 @@
     backToTopBtn.addEventListener('click', function(){
       window.scrollTo({top: 0, behavior: 'smooth'});
     });
+
+    // Show the button when the user scrolls down 100px from the top of the document
+    window.addEventListener('scroll', function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    });
   </script>
 
   <!-- Navigation Toggle JS -->
